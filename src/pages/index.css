@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+.section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+}
+
+.background {
+  position: absolute;
+  background-color: #fafafa;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  z-index: -1;
+}
+
+.background-text {
+  color: #CCCCCC;
+  font-size: 10em;
+  line-height: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  max-width: 1040px;
+  margin: auto;
+  padding-bottom: 0.3em;
+}
+
+.title-container {
+  display: flex;
+  margin: auto 0px;
+}
+
+.title {
+  font-size: 8em;
+}
+
+.subtitle {
+  align-self: flex-end;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 1.7em;
+  line-height: 1em;
+  text-indent: 1em;
+}
+
+.blinking-cursor {
+  float: right;
+  width: 3px;
+  height: 170px;
+  background-color: #222;
+  -webkit-animation: blink 1.5s infinite;
+  -moz-animation: blink 1.5s infinite;
+  -ms-animation: blink 1.5s infinite;
+  -o-animation: blink 1.5s infinite;
+  animation: blink 1.5s infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    background-color: #222
+  }
+  50% {
+    background-color: #ffffff00
+  }
+  100% {
+    background-color: #222
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: #222
+  }
+  50% {
+    background-color: #ffffff00
+  }
+  100% {
+    background-color: #222
+  }
+}
