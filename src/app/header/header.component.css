@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.background {
+  position: absolute;
+  background-color: #fafafa;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  z-index: -1;
+}
+
+.background-text {
+  color: #CCCCCC;
+  font-size: 10em;
+  font-weight: 900;
+  line-height: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  max-width: 1040px;
+  margin: auto;
+  padding-bottom: 0.3em;
+}
+
+.title-container {
+  display: flex;
+}
+
+.title {
+  font-size: 6em;
+  font-weight: 900;
+}
+
+.subtitle-container {
+  width: 300px;
+  padding: 0 1em;
+  align-self: flex-end
+}
+
+.subtitle {
+  font-size: 1em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  line-height: 1em;
+  text-indent: 1em;
+  align-self: flex-end;
+}
+
+span {
+  color: #46D5E2;
+}
+
+.blinking-cursor {
+  /* float: right; */
+  display: inline-block;
+  width: 3px;
+  height: 120px;
+  background-color: #222;
+  -webkit-animation: blink 1.5s infinite;
+  -moz-animation: blink 1.5s infinite;
+  -ms-animation: blink 1.5s infinite;
+  -o-animation: blink 1.5s infinite;
+  animation: blink 1.5s infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    background-color: #222
+  }
+  50% {
+    background-color: #ffffff00
+  }
+  100% {
+    background-color: #222
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: #222
+  }
+  50% {
+    background-color: #ffffff00
+  }
+  100% {
+    background-color: #222
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .title-container {
+    flex-wrap: wrap;
+    padding: 0 1em;
+  }
+  .title {
+    font-size: 4.4em;
+  }
+  .subtitle-container {
+    width: 100%;
+    padding-left: 30%;
+    padding: 0;
+  }
+  .subtitle {
+    text-align: right;
+  }
+  .blinking-cursor {
+    height: 139px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .background-text {
+    font-size: 7em;
+  }
+  .title {
+    font-size: 3em;
+  }
+  .blinking-cursor {
+    height: 110px;
+  }
+}

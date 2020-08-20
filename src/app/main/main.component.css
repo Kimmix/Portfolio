@@ -1,0 +1,80 @@
+
+a:hover {
+  cursor: pointer;
+}
+.section {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1em;
+}
+
+.footer {
+  width: 100%;
+  padding: 2em 0;
+  background-color: #212121;
+  color: white;
+}
+
+.banner {
+  width: 100%;
+  padding: 1em 0;
+  background-color: #4687E2;
+  color: white;
+}
+
+.banner p {
+  margin-top: 0;
+  font-size: 0.7em;
+}
+
+.banner h1, h3 {
+  margin: 0;
+}
+
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img-container {
+  max-width: 30%;
+  padding: 0 1em;
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  display: flex;
+  width: 30%;
+  font-weight: bold;
+}
+
+.desc {
+  display: flex;
+  width: 70%;
+}
+
+.icon {
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .title, .desc {
+    width: 100%;
+  }
+  .img-container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
