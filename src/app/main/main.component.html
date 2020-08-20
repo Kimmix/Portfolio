@@ -38,24 +38,33 @@
 </div>
 
 <!-- SKill -->
-<div id="Experience" class="section">
+<div id="Experience" class="section" [ngStyle]="{ flexDirection: 'column' }">
   <div class="content">
-    <h1 class="section-header">Skill/Experience</h1>
+    <h1
+      class="section-header"
+      [ngStyle]="{ textAlign: 'center', paddingBottom: '2em' }"
+    >
+      Skill/Experience
+    </h1>
+    <div>
+      <img class="responsive-img" src="assets/img/Logo1.png" />
+      <img class="responsive-img" src="assets/img/Logo2.png" />
+    </div>
   </div>
-</div>
-<div class="banner">
-  <div class="content">
-    <div class="flex-row">
-      <h1 [ngStyle]="{ width: '60%', lineHeight: '60px' }">
-        WORK<br />EXPERIENCE
-      </h1>
-      <div class="flex-col" [ngStyle]="{ width: '40%' }">
-        <h3>Intership</h3>
-        <p><i>@CDG Systems Ltd.</i></p>
-        <p>
-          Full stack developer for in-house documents management web application
-          with Angular and Java EE backend
-        </p>
+  <div class="banner">
+    <div class="content">
+      <div class="flex-row">
+        <h1 [ngStyle]="{ width: '60%', lineHeight: '60px' }">
+          WORK<br />EXPERIENCE
+        </h1>
+        <div class="flex-col" [ngStyle]="{ width: '40%' }">
+          <h3>Intership</h3>
+          <p><i>@CDG Systems Ltd.</i></p>
+          <p>
+            Full stack developer for in-house documents management web
+            application with Angular and Java EE backend
+          </p>
+        </div>
       </div>
     </div>
   </div>
