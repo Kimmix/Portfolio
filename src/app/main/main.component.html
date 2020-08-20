@@ -1,19 +1,23 @@
-<div #about class="section">
+<!-- About:me -->
+<div id="about:me" class="section">
   <div class="content flex-row">
     <div class="img-container">
-      <img class="responsive-img" src="assets/img/FB_Profile.jpg">
+      <img class="responsive-img" src="assets/img/FB_Profile.jpg" />
     </div>
-    <div class="flex-col" [ngStyle]="{width: '70%'}">
+    <div class="flex-col" [ngStyle]="{ width: '70%' }">
       <h3>My name is Sarit Soponvattnasevi</h3>
       <h1>I'm a freshly graduated from KMITL</h1>
-      <p>I am very passionate by new technology, always curious, seeking for truth and learning new things. Interest in
-        web technology. Not a talkative person but thoughtful and positive person.</p>
-      <br>
+      <p>
+        I am very passionate by new technology, always curious, seeking for
+        truth and learning new things. Interest in web technology. Not a
+        talkative person but thoughtful and positive person.
+      </p>
+      <br />
       <div class="flex-row-warp">
         <p class="title">Fullname :</p>
         <p class="desc">Sarit Soponvattnasevi</p>
         <p class="title">Age :</p>
-        <p class="desc">24</p>
+        <p class="desc">{{ age }}</p>
         <p class="title">Address :</p>
         <p class="desc">Thailand, Nonthaburi 11110</p>
         <p class="title">Phone No. :</p>
@@ -21,17 +25,20 @@
         <p class="title">Email :</p>
         <p class="desc">kimmix05@gmail.com</p>
       </div>
-
     </div>
   </div>
 </div>
-<div #timeline class="section" [ngStyle]="{backgroundColor: '#F5F9FA'}">
+
+<!-- Timeline -->
+<div class="section" [ngStyle]="{ backgroundColor: '#F5F9FA' }">
   <div class="content timeline">
     <h1 class="section-header">Timeline</h1>
-    <img class="responsive-img" src="assets/img/timeline.png">
+    <img class="responsive-img" src="assets/img/timeline.png" />
   </div>
 </div>
-<div #skill class="section">
+
+<!-- SKill -->
+<div id="Experience" class="section">
   <div class="content">
     <h1 class="section-header">Skill/Experience</h1>
   </div>
@@ -39,44 +46,65 @@
 <div class="banner">
   <div class="content">
     <div class="flex-row">
-      <h1 [ngStyle]="{width: '60%', lineHeight: '60px'}">WORK<br>EXPERIENCE</h1>
-      <div class="flex-col" [ngStyle]="{width: '40%'}">
+      <h1 [ngStyle]="{ width: '60%', lineHeight: '60px' }">
+        WORK<br />EXPERIENCE
+      </h1>
+      <div class="flex-col" [ngStyle]="{ width: '40%' }">
         <h3>Intership</h3>
         <p><i>@CDG Systems Ltd.</i></p>
-        <p>Full stack developer for in-house documents management
-          web application with Angular and Java EE backend</p>
+        <p>
+          Full stack developer for in-house documents management web application
+          with Angular and Java EE backend
+        </p>
       </div>
     </div>
   </div>
-
 </div>
-<div #project class="section">
+
+<!-- Project -->
+<div id="Project" class="section">
   <div class="content">
     <h1 class="section-header">Project</h1>
   </div>
 </div>
 <div class="footer">
   <div class="content">
-    <div class="flex-row" [ngStyle]="{justifyContent: 'space-between'}">
+    <div class="flex-row" [ngStyle]="{ justifyContent: 'space-between' }">
       <div>
         <h1>Hello world,</h1>
-        <p>Home</p>
+        <!-- <p>Home</p>
         <p>about:me</p>
         <p>Experience</p>
-        <p>Project</p>
+        <p>Project</p> -->
+        <div *ngFor="let list of menu">
+          <a (click)="scroll(list)"> {{ list }} </a>
+        </div>
       </div>
     </div>
-    <div class="flex-row" [ngStyle]="{justifyContent: 'space-between', paddingTop: '20px'}">
+    <div
+      class="flex-row"
+      [ngStyle]="{ justifyContent: 'space-between', paddingTop: '20px' }"
+    >
       <div>
-        <p [ngStyle]="{color: '#797979', fontWeight: 'bold'}">Kimmix © 2020</p>
+        <p [ngStyle]="{ color: '#797979', fontWeight: 'bold' }">
+          Kimmix © 2020
+        </p>
       </div>
-      <div [ngStyle]="{textAlign: 'center'}">
-        <fa-icon class="icon" [icon]="faFacebook" size="2x"></fa-icon>
-        <fa-icon class="icon" [icon]="faLinkedin" size="2x"></fa-icon>
-        <fa-icon class="icon" [icon]="faGithub" size="2x"></fa-icon>
+      <div class="links" [ngStyle]="{ textAlign: 'center' }">
+        <a href="https://fb.me/Sarit.KS">
+          <fa-icon class="icon" [icon]="faFacebook" size="2x"></fa-icon>
+        </a>
+        <a href="https://www.linkedin.com/in/sarit-soponvattanasevi-79293b1b0/">
+          <fa-icon class="icon" [icon]="faLinkedin" size="2x"></fa-icon>
+        </a>
+        <a href="https://github.com/kimmix">
+          <fa-icon class="icon" [icon]="faGithub" size="2x"></fa-icon>
+        </a>
       </div>
       <div>
-        <a (click)="scroll(about)" [ngStyle]="{textAlign: 'end'}">BACK TO TOP ^</a>
+        <a (click)="scrollToTop()" [ngStyle]="{ textAlign: 'end' }"
+          >BACK TO TOP ^</a
+        >
       </div>
     </div>
   </div>

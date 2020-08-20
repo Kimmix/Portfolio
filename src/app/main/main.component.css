@@ -1,7 +1,7 @@
-
 a:hover {
   cursor: pointer;
 }
+
 .section {
   display: flex;
   flex-flow: wrap;
@@ -67,6 +67,13 @@ a:hover {
 
 .icon {
   padding: 0 10px;
+}
+
+.links>a {
+  color: #ffffffd3;
+}
+.links>a:hover {
+  color: #ffffff;
 }
 
 @media screen and (max-width: 600px) {

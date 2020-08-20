@@ -1,17 +1,8 @@
 <div class="navbar">
   <div class="navbar-container">
     <ul class="nav-link">
-      <li>
-        <a>Home</a>
-      </li>
-      <li>
-        <a>about:me</a>
-      </li>
-      <li>
-        <a>Experience</a>
-      </li>
-      <li>
-        <a>Project</a>
+      <li *ngFor="let list of menu">
+        <a (click)="scroll(list)"> {{ list }} </a>
       </li>
     </ul>
   </div>

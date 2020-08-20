@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `
-  <app-navbar></app-navbar>
-  <app-header></app-header>
-  <app-main></app-main>
+    <app-navbar [menu]="menu"></app-navbar>
+    <app-header></app-header>
+    <app-main [menu]="menu"></app-main>
   `,
-  styles: []
+  styles: [],
 })
 export class AppComponent {
-  title = 'portfolio';
+  title = "portfolio";
+  menu = ["Home", "about:me", "Experience", "Project"];
 }
