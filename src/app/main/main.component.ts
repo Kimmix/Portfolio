@@ -1,6 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
+import {
+  faGithub,
+  faFacebook,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
-import { faGithub, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { version } from "package.json";
 
 @Component({
   selector: "app-main",
@@ -13,6 +18,7 @@ export class MainComponent implements OnInit {
   faFacebook = faFacebook;
   faLinkedin = faLinkedin;
   age = null;
+  version: string = version;
 
   constructor() {}
 
