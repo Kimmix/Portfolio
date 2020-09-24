@@ -7,7 +7,6 @@
     <build-runners>
       <runner id="RUNNER_1" name="" type="DockerCommand">
         <parameters>
-          <param name="command.args" value="--pull" />
           <param name="docker.command.type" value="build" />
           <param name="docker.image.namesAndTags" value="kimmix05/portfolio:0.0.%build.counter%" />
           <param name="docker.push.remove.image" value="true" />
