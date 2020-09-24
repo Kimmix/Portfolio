@@ -3,6 +3,9 @@
   <name>Build</name>
   <description />
   <settings>
+    <options>
+      <option name="buildNumberPattern" value="0.0.%build.counter%" />
+    </options>
     <parameters />
     <build-runners>
       <runner id="RUNNER_1" name="" type="DockerCommand">
